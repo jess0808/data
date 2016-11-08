@@ -1,0 +1,313 @@
+/*general styles*/
+.img-responsive{
+  margin:0 auto;
+  height:auto!important;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.text-link {
+  color: #337ab7;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+a.text-link:hover {
+  color:#BA131A;
+}
+
+.pad-body {
+  padding-bottom: 30px;
+}
+
+.pad-chart {
+  padding-top: 20px;
+}
+
+.pad-carib {
+  padding-top: 20px;
+}
+
+.pad-map {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.pad-end {
+  padding-bottom: 60px;
+}
+
+/*header*/
+.headerimage {
+    margin: 40px;
+	position: relative;
+	z-index: 20;
+}
+
+/*header media queries*/
+
+@media (min-width: 992px) {
+    .headerimage .col-md-12 {
+        width: inherit;
+    }
+}
+
+
+
+/*map*/
+
+.mapbox {
+  background: url("images/1-mapbg2.jpg") no-repeat !important;
+  background-size: cover;
+}
+
+
+#chartdiv {
+  width: 100%;
+  height: 400px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 5px solid #fff;
+}
+
+image{
+  width: 20px;
+  height:20px;
+  color: #fff;
+}
+
+
+g {
+    padding: 50px;
+}
+
+.map-marker {
+    /* adjusting for the marker dimensions
+    so that it is centered on coordinates */
+    margin-left: -8px;
+    margin-top: -8px;
+    visibility:visible !important;
+}
+.map-marker.map-clickable {
+    cursor: pointer;
+}
+
+
+
+
+  
+/*slider*/
+#slider {
+  margin: 20px;
+}
+
+.ui-slider .ui-slider-handle {
+  width: 50px!important;
+  text-align: center;
+  margin-left: -1.6em!important;
+  height: 20px;
+}
+
+.ui-state-default, .ui-widget-content {
+  border: 1px solid #fff;
+  background: #fff;
+  color: black;
+}
+
+.ui-corner-all {
+  border-radius: 8px;
+}
+
+
+
+/*tabs*/
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #D2AA56;
+    border: none;
+    border-bottom-color: transparent;
+}
+
+body .nav {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+
+
+/*data tables*/
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: transparent;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #337ab7; 
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  color: #337ab7 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #337ab7 !important;
+}
+
+tbody {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+body th {
+ font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #337ab7; 
+}
+
+/*background*/
+body {
+  background:#002040;
+  color: #FFF !important;
+}
+
+/* Waves background || source:http://codepen.io/nckprsn/pen/GgxWrb*/
+
+.bg-waves {
+  overflow: hidden;
+}
+
+.waves
+{
+  width:100%;
+  overflow: hidden;
+
+}
+
+.wave
+{
+	width:calc( 100% + 4em );
+	height:20%;
+	position:absolute;
+	left:-2em;
+	background:bottom center repeat-x;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+}
+
+/* Individual wave layers */
+
+.wave_1
+{
+  animation-name:wave_1;
+  animation-duration:3400ms;
+  animation-delay:-1200ms;
+  top:-1.0em;
+  z-index:1;
+  opacity:0.10;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="246" height="2000" viewBox="0 0 246 2000"><path fill-rule="evenodd" clip-rule="evenodd" fill="#153C65" d="M0 2000c50.43 0 72.57-20.522 123-20.522 50.43 0 71.34 20.522 123 20.522V0H0v2000z"/></svg>'); 
+  background-position:bottom left;
+}
+
+.wave_2
+{
+  animation-name:wave_2;
+  animation-duration:3200ms;
+  animation-delay:-600ms;
+  top:-2.0em;
+  z-index:2;
+  opacity:0.25;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="307" height="2000" viewBox="0 0 307 2000"><path fill-rule="evenodd" clip-rule="evenodd" fill="#153C65" d="M0 0h307v2000c-64.47 0-90.563-25.623-153.5-25.623C90.565 1974.377 62.935 2000 0 2000V0z"/></svg>');
+  background-position:bottom right;
+}
+
+.wave_3
+{
+  animation-name:wave_3;
+  animation-duration:2800ms;
+  animation-delay:-2400ms;
+  top:-3.0em;
+  z-index:3;
+  opacity:0.50;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="2000" viewBox="0 0 384 2000"><path fill-rule="evenodd" clip-rule="evenodd" fill="#153C65" d="M0 0h384v2000c-80.64 0-113.28-32.047-192-32.047S78.72 2000 0 2000V0z"/></svg>');
+  background-position:bottom center;
+}
+
+.wave_4
+{
+  animation-name:wave_4;
+  animation-duration:2600ms;
+  animation-delay:-1800ms;
+  top:-4.0em;
+  z-index:4;
+  opacity:0.75;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="480" height="2000" viewBox="0 0 480 2000"><path fill-rule="evenodd" clip-rule="evenodd" fill="#153C65" d="M480 2000c-100.8 0-141.6-39.892-240-39.892S98.4 2000 0 2000V0h480v2000z"/></svg>');
+  background-position:bottom left;
+}
+
+.wave_5
+{
+  animation-name:wave_5;
+  animation-duration:3000ms;
+  animation-delay:-3000ms;
+  top:-5.0em;
+  z-index:5;
+  opacity:0.90;
+  background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="2000" viewBox="0 0 600 2000"><path fill-rule="evenodd" clip-rule="evenodd" fill="#153C65" d="M0 2000c123 0 177-49.866 300-49.866S474 2000 600 2000V0H0v2000z"/></svg>');
+  background-position:bottom right;
+}
+
+/* Wave animations */
+
+@keyframes wave_1
+{
+	from { transform: rotate(0deg)   translatey(-0.61em) rotate(0deg)    ; }
+	to   { transform: rotate(360deg) translatey(-0.61em) rotate(-360deg) ; }
+}
+
+@keyframes wave_2
+{
+	from { transform: rotate(0deg)   translatey(-0.77em) rotate(0deg)    ; }
+	to   { transform: rotate(360deg) translatey(-0.77em) rotate(-360deg) ; }
+}
+
+@keyframes wave_3
+{
+	from { transform: rotate(0deg)   translatey(-0.96em) rotate(0deg)    ; }
+	to   { transform: rotate(360deg) translatey(-0.96em) rotate(-360deg) ; }
+}
+
+@keyframes wave_4
+{
+	from { transform: rotate(0deg)   translatey(-1.2em) rotate(0deg)    ; }
+	to   { transform: rotate(360deg) translatey(-1.2em) rotate(-360deg) ; }
+}
+
+@keyframes wave_5
+{
+	from { transform: rotate(0deg)   translatey(-1.5em) rotate(0deg)    ; }
+	to   { transform: rotate(360deg) translatey(-1.5em) rotate(-360deg) ; }
+}
+
+
+
+
+

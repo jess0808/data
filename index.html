@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coral Reefs</title>
+	
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    
+    
+    
+    <!--styles-->
+        <!--slider-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+        <!--data tables-->
+		<link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+		<link href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.min.css" rel="stylesheet">
+		 <!--custom styles-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300|Roboto+Condensed:700" rel="stylesheet">
+</head>
+
+<body>
+
+<!--background waves-->
+
+<div class="waves">
+    <div class="wave wave_1"></div>
+	<div class="wave wave_2"></div>
+	<div class="wave wave_3"></div>
+	<div class="wave wave_4"></div>
+	<div class="wave wave_5"></div>
+</div>
+    
+<div class="container headerimage">
+    <div class="row">
+        <div class="col-md-12 logo">
+            <img src="images/1-logo1.png" style="width: 400px; height: 137px" class="img-responsive">
+        
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+			<h1>A DYING UNDERWATER WORLD</h1>
+            <p>Coral reefs are some of the most valuable ecosystems on Earth and they are dying rapidly. 70% of the world's coral reefs have already been destroyed and these ecosystems are expected to disappear altogether over the next four decades. Some of the greatest threats to coral reefs include overfishing, pollution, ocean acidification, and climate change.</p>
+			<p>Zoom in and hover over the points on the map below to see <a class="text-link" href="http://www.coralreefwatch.noaa.gov/vs/data.php" > coral reef stations </a>that have high stress levels. Use the slider to see how alert areas change over time.</p>
+        
+        </div>
+    </div>
+</div>
+
+
+<div class="container mapbox">
+    <div id="chartdiv"></div>
+    <div id="slider"></div> <!--source: https://www.amcharts.com/kbase/time-line-map-jquery-ui-slider/-->
+</div>
+
+
+<div class="container pad-map">
+	<div class="row">
+		<div class="col-md-4">
+			<h1>COLLAPSE OF THE CARIBBEAN</h1>
+			<p>The Caribbean used to be an ideal breeding ground for corals where they could thrive and grow quickly. Unfortunately, the Caribbean reefs are mostly dead today as coral cover in the area has plummeted to less than 10%. The Caribbean reefs are the first system to experience such a collapse and many fear that other reefs may follow.  </p>
+			<p>Click on the tabs to explore the <a class="text-link" href="https://cmsdata.iucn.org/downloads/caribbean_coral_reefs___status_report_1970_2012.pdf" > decline of certain coral </a>in major areas of the Caribbean.</p>
+		</div>
+		
+		
+		
+		
+		<div class="col-md-8" id="linegraphs">
+			<ul class="nav nav-tabs" id="tab1"><!--source: http://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp-->
+				<li class="active"><a data-toggle="tab" href="#acro">Acropora</a></li>
+				<li><a data-toggle="tab" href="#agari">Agariciidae</a></li>
+				<li><a data-toggle="tab" href="#pori">Poritidae</a></li>
+			</ul>
+			
+			<div class="tab-content"> 
+				<p class="pad-carib">Click on any group in the legend to toggle its visibility. Hover over points to see the cover percentage for a given year. </p>
+				<div id="acro" class="tab-pane fade in active pad-chart">
+				  <div id="line1" class="contains-chart" style="margin: 0 auto"></div>
+				</div>
+				<div id="agari" class="tab-pane fade pad-chart">
+				  <div id="line2" class="contains-chart" style="margin: 0 auto"></div>
+				</div>
+				<div id="pori" class="tab-pane fade pad-chart">
+				  <div id="line3" class="contains-chart" style="margin: 0 auto"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container pad-body">
+	<div class="row">
+
+		<div class="col-md-12">
+			<ul class="nav nav-tabs" id="tab2">
+				<li class="active"><a data-toggle="tab" href="#cost">Costs</a></li>
+				<li><a data-toggle="tab" href="#value">Value</a></li>
+			</ul>
+			
+			<div class=col-md-12">
+				<h1>ECONOMIC IMPACTS</h1>
+				<p>Click on the tabs above to explore the economic costs and benefits of specific coral reef regions and sites.</p>
+			</div>
+			
+			<div class="tab-content">
+				
+				<p>Hover over the charts to see the specific value associated with each group.</p>
+				<div id="cost" class="tab-pane fade in active pad-chart">
+					<div class="col-md-4">
+					  <div id="pie1" class="contains-chart" style="margin: 0 auto"></div>
+					</div>
+					<div class="col-md-8">
+					  <div id="bar1" class="contains-chart" style="margin: 0 auto"></div>
+					</div>
+				</div>
+				
+				<div id="value" class="tab-pane fade pad-chart">
+					<div class="col-md-4">
+					  <div id="pie2" class="contains-chart" style="margin: 0 auto"></div>
+					</div>
+					<div class="col-md-8">
+						<div id="bar2" class="contains-chart" style="margin: 0 auto"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container pad-end">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>THE STATE OF THE REEFS IN THE ATLANTIC AND PACIFIC</h1>
+			<p>Use the search bar and column headers to sort data.</p>
+			<table id="test" class="display pad-chart" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Station Name</th>
+						<th>Location</th>
+						<th>Maximum Monthly Mean</th>
+						<th>Coral Bleaching Threshold</th>
+						<th>Current Stress Level</th>
+						<th>Change from Last Update</th>
+						
+					</tr>
+				</thead>
+				
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<!--data tables-->
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+
+   
+
+<!--map-->
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
+
+<!--highcharts-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--custom styles-->
+<script src="map_data.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
